@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-10-05T15:48:49+00:00
+
+====== Parts ======
+Created Sunday 05 October 2025
+
+===== 1x STM32F103CBT6 =====
+==== Description ====
+This is a 32-bit ARM Cortex-M3 microcontroller from STMicroelectronics. It's a popular MCU with 128KB flash memory, running at up to 72MHz, and comes in a LQFP-48 package. It's widely used in embedded systems, hobby projects, and professional applications.
+
+==== Package ====
+LQFP48
+
+===== 2x 74HC245D =====
+ These are octal bus transceivers (8-bit bidirectional buffer/line driver) from the 74HC logic family. They're used to interface between different logic levels or to buffer signals on a bus. The 'D' suffix indicates a SOIC package.
+
+===== 7x EL357NC718 =====
+These are optocouplers (also called optoisolators) with a phototransistor output. They provide electrical isolation between circuits while allowing signal transmission through light. The large quantity suggests they're likely being used to isolate multiple I/O lines, possibly for industrial control or safety-critical applications.
+
+===== 1x M35391MVS91G4 =====
+his appears to be a relay driver or power management IC from Renesas (formerly Mitsubishi). These types of ICs are typically used to drive relays, solenoids, or other loads that require more current than a microcontroller can provide directly.
+
+
+===== 1x AMS1117-3.3 =====
+The AMS1117 is a popular low dropout (LDO) linear voltage regulator. It's commonly used to provide stable, regulated DC voltage in electronic circuits.
+Key characteristics:
+
+Low dropout voltage: Typically 1V-1.3V at full load (meaning if you want 3.3V output, you only need about 4.3V minimum input)
+Output current: Up to 1A (1000mA)
+Fixed or adjustable output: Available in fixed voltage versions (1.5V, 1.8V, 2.5V, 3.3V, 5.0V) or an adjustable version
+Common versions:
+
+AMS1117-3.3 - outputs 3.3V (very popular for powering microcontrollers and digital logic)
+AMS1117-5.0 - outputs 5V
+AMS1117-ADJ - adjustable output voltage set by external resistors
+
+
+
+Typical applications:
+
+Stepping down 5V to 3.3V for microcontrollers (like your STM32)
+Battery-powered devices
+Power supply circuits
+Converting USB 5V to 3.3V logic levels
+
+It's essentially a Chinese clone/equivalent of the National Semiconductor LM1117, manufactured by Advanced Monolithic Systems (AMS). It comes in various packages including SOT-223, SOT-89, and TO-252.
+The AMS1117-3.3 is extremely common in Arduino boards, ESP8266/ESP32 modules, and many hobbyist electronics for providing the 3.3V rail needed by modern microcontrollers.
