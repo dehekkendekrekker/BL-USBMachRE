@@ -1,0 +1,42 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2025-10-26T18:04:59+00:00
+
+====== Analysis ======
+Created Sunday 26 October 2025
+
+
+
+===== Connections =====
+==== J2-6  stepper controller connections ====
+Each header interfaces one stepper controller.
+The pinout is as follows:
+
+1) EN
+2) D
+3) P
+4) +5V
+
+This appears to be a common-cathode system that drives opto-couplers or 
+
+
+==== J7-11 ====
+This header exposes outputs
+
+
+
+===== H2,H3: 74HC245D =====
+Octal bus transceiver. Can either output bus A on B or B on A depending on the direction pin 1 an OE.
+
+Operates at 5V
+
+The reason they are on the board is to drive the opto-couplers on the stepper boards.
+The design is strange though, the 245 has limited driving capability
+
+
+DIR == 0, OE==0 So data flows from B to A.
+
+
+===== Possible problems =====
+74HC245 operates at 5V logic levels, yet the controlller works at 3.3V. 
+I have tested the level shifting unloaded, and it seems to work. A 3.3V input does yield a 5V output signal. However, not sure with load!
